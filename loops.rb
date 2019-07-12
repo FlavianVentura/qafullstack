@@ -16,3 +16,11 @@ for item in (0...10)
     puts 'repetindo a mensagem ' + item.to_s + ' Vezes'
 end
 
+# Utilizando while para percorrer arrays
+init = 0
+
+while init <= 10 do
+
+    puts 'Usando while para percorrer arrays'
+    init += 1
+end
