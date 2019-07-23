@@ -1,6 +1,6 @@
 describe 'Forms' do
 
-    it 'realizar login' do
+    it 'login com sucesso' do
 
         visit 'https://training-wheels-protocol.herokuapp.com/login'
 
@@ -16,4 +16,29 @@ describe 'Forms' do
         #O método have-content verifica se o texto existe em algum lugar da página.
         expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
     end
+
+   it 'login senha incorreta' do
+
+    visit 'https://training-wheels-protocol.herokuapp.com/login'
+
+        fill_in 'username', with: 'stark'
+        fill_in 'password', with: 'stark!'
+        click_button 'Login'
+
+        expect(find('#flash').visible?).to be true
+        expect(find('#flash').text).to include 'Senha é invalida!'
+
+   end
+
+   it 'usuário não cadastrado' do
+
+        visit 'https://training-wheels-protocol.herokuapp.com/login'
+
+        fill_in 'username', with: 'qualquercoisa'
+        fill_in 'password', with: 'maisoutracoisa'
+        click_button 'Login'
+
+        expect(find('#flash').text).to include 'O usuário informado não está cadastrado!'
+   end
+
 end
