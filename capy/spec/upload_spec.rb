@@ -22,7 +22,6 @@ describe 'realizando upload de arquivos', :upload do
         attach_file('file-upload', @imagem)
         click_button 'Upload'
 
-        sleep 7
         img = find('#new-image')
         expect(img[:src]).to include '/uploads/imagem.png'
     end
