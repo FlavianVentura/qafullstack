@@ -7,7 +7,8 @@ describe 'trabalhando com mouse hover', :hover do
 
     it 'quando passo o mouse no Blade', :blade do
 
-        card = find('img[alt=Blade]')
+        # Aqui a busca é por elementos que contenham a palavra informamada...
+        card = find('img[alt*=Blade]')
         card.hover
 
         expect(page).to have_content 'Nome: Blade'
@@ -16,6 +17,7 @@ describe 'trabalhando com mouse hover', :hover do
 
     it 'quando passo o mouse em pantera negra', :pantera do
 
+        #O nome pantera negra estáentre aspas duplas por que contem caracter especial "espaço" para assim ser reconhecido pelo capybara
         card = find('img[alt="Pantera Negra"]')
         card.hover
 
@@ -23,8 +25,9 @@ describe 'trabalhando com mouse hover', :hover do
     end
 
     it 'quando passo o mouse em Homen Aranha' do
-
-        card = find('img[alt="Homem Aranha"]')
+        # Aqui, usaremos expressões regulares para busca de elementos.
+        # Este acento significa dizer que a busca é por elementos que terminem com a palavra "Aranha..."
+        card = find('img[alt$=Aranha]')
         card.hover
 
         expect(page).to have_content 'Nome: Homem Aranha'
