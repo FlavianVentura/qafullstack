@@ -17,7 +17,7 @@ describe 'trabalhando com mouse hover', :hover do
 
     it 'quando passo o mouse em pantera negra', :pantera do
 
-        #O nome pantera negra estáentre aspas duplas por que contem caracter especial "espaço" para assim ser reconhecido pelo capybara
+        #O nome pantera negra está entre aspas duplas por que contem caracter especial "espaço" para assim ser reconhecido pelo capybara
         card = find('img[alt="Pantera Negra"]')
         card.hover
 
@@ -26,7 +26,7 @@ describe 'trabalhando com mouse hover', :hover do
 
     it 'quando passo o mouse em Homen Aranha' do
         # Aqui, usaremos expressões regulares para busca de elementos.
-        # Este acento significa dizer que a busca é por elementos que terminem com a palavra "Aranha..."
+        # Este $ significa dizer que a busca é por elementos que terminem com a palavra "Aranha..."
         card = find('img[alt$=Aranha]')
         card.hover
 

@@ -17,7 +17,7 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 
   config.before(:example) do
-    page.current_window.resize.to(1200, 800)
+    page.current_window.resize_to(1300, 1350)
   end
 
 end
