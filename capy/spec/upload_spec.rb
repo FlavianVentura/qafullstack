@@ -2,7 +2,7 @@ describe 'realizando upload de arquivos', :upload do
 
     before(:each) do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/upload'
+        visit '/upload'
 
         @arquivo = Dir.pwd + '/spec/fixture/arquivo.txt'
         @imagem = Dir.pwd + '/spec/fixture/imagem.png'

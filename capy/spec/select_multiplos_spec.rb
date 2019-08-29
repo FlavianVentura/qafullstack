@@ -1,8 +1,8 @@
-describe 'Seleciona múltiplos atores' do
+describe 'Seleciona múltiplos atores', :smoke do
 
     before(:each) do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/apps/select2/multi.html'
+        visit '/apps/select2/multi.html'
     end
 
     def seleciona(ator)

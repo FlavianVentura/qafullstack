@@ -2,7 +2,7 @@ describe 'Acessar página de login e cadastro' do
 
 before(:each) do
 
-    visit 'https://training-wheels-protocol.herokuapp.com/access'
+    visit '/access'
 end 
 
     it 'login com sucesso', :login do

@@ -4,7 +4,7 @@ describe 'select 2', :select2 do
 
         before(:each) do
 
-            visit 'https://training-wheels-protocol.herokuapp.com/apps/select2/single.html'
+            visit '/apps/select2/single.html'
         end
 
         it 'seleciona um ator' do

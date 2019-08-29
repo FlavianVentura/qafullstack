@@ -1,11 +1,11 @@
 
 
-describe 'selecionando itens no select', :dropdown do
+describe 'selecionando itens no select', :dropdown, :smoke do
 
     # Quando o objeto select contem um "ID" para ser selecionado...
     it 'selecionando iten com id' do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
+        visit '/dropdown'
 
         select('Loki', from: 'dropdown')
         sleep 3
@@ -13,7 +13,7 @@ describe 'selecionando itens no select', :dropdown do
 
     it 'selecionando o iten sem id do elemento' do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
+        visit '/dropdown'
         
         drop = find('.avenger-list')
         drop.find('option', text: 'Scott Lang').select_option
@@ -22,7 +22,7 @@ describe 'selecionando itens no select', :dropdown do
 
     it 'selecionando o iten atraves do array', :sample do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
+        visit '/dropdown'
         
         drop = find('.avenger-list')
         drop.all('option').sample.select_option

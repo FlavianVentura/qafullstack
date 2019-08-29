@@ -2,7 +2,7 @@ describe 'validando teclas do teclado', :teclas do
 
     before(:each) do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/key_presses'
+        visit '/key_presses'
     end
 
     it 'validando simbolos' do
